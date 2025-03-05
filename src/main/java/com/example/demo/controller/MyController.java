@@ -1,6 +1,6 @@
-package com.example.demo.Controller;
+package com.example.demo.controller;
 
-import com.example.demo.Repository.MyRepository;
+import com.example.demo.model.repository.MyRepository;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -11,10 +11,11 @@ import java.util.List;
 
 @RestController
 public class MyController {
-    MyRepository repository;
+    private final MyRepository repository;
 
     public MyController(MyRepository repository) {
         this.repository = repository;
+
     }
 
     @GetMapping("/persons/by-city")

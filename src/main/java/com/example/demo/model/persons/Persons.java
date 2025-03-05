@@ -1,22 +1,18 @@
-package com.example.demo;
+package com.example.demo.model.persons;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 
 @Entity
-@Table(name = "Persons", schema = "myschema")
+@IdClass(PersonsId.class)
+@Table(name = "persons", schema = "myschema")
 public class Persons {
     @Id
     @Column(name = "age", nullable = false, length = 50)
     private int age;
-
-    //@Id
+    @Id
     @Column(name = "name", nullable = false, length = 50)
     private String name;
-
-    //@Id
+    @Id
     @Column(name = "surname", nullable = false)
     private String surname;
 
