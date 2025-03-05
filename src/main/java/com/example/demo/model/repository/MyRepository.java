@@ -6,7 +6,7 @@ import jakarta.persistence.TypedQuery;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
-
+//repository
 @Repository
 public class MyRepository {
     @PersistenceContext
