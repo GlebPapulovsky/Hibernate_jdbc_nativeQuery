@@ -9,7 +9,10 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
+
 public class javaConf {
+
+
     @Bean
     public MyRepository myRepository(EntityManager em, JpaRepositoryInterface jpaRepositoryInterface) {
         return new MyRepository(em, jpaRepositoryInterface);

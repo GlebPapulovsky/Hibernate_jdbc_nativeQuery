@@ -20,6 +20,7 @@ public class MyController {
 
     }
 
+
     //localhost:8080/persons/by-city?city=Moscow
     @GetMapping("persons/by-city")
     public ResponseEntity<List<String>> getPersonsByCity(String city) {
